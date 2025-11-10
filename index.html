@@ -3,283 +3,86 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy • Mc Handyman LLC</title>
-  <meta name="description" content="Privacy Policy for Mc Handyman LLC, including SMS consent terms, data sharing, and user rights." />
-  <meta name="robots" content="index,follow" />
-  <meta property="og:title" content="Privacy Policy • Mc Handyman LLC" />
-  <meta property="og:description" content="How Mc Handyman LLC collects, uses, and protects your data. Includes SMS disclosures and opt-out instructions." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR-GITHUB-PAGES-DOMAIN/privacy.html" />
-  <link rel="canonical" href="https://YOUR-GITHUB-PAGES-DOMAIN/privacy.html" />
+  <title>Mc Handyman LLC</title>
+  <meta name="description" content="Mc Handyman LLC — Handyman & light construction services. Contact us, view our Privacy Policy and Terms of Service." />
+  <link rel="canonical" href="https://YOUR-GITHUB-PAGES-DOMAIN/index.html" />
   <style>
-    /* ----- Minimal, readable, print-friendly styles (no build tools required) ----- */
-    :root {
-      --bg: #0b0d11;
-      --card: #11151b;
-      --text: #e7ecf3;
-      --muted: #a7b0bf;
-      --accent: #4da3ff;
-      --accent-2: #7bd389;
-      --border: #222838;
-      --focus: #b4d4ff;
-      --maxw: 980px;
-      --radius: 16px;
-    }
+    :root { --bg:#0b0d11; --card:#11151b; --text:#e7ecf3; --muted:#a7b0bf; --accent:#4da3ff; --accent-2:#7bd389; --border:#222838; --maxw:980px; --radius:16px; }
     html { color-scheme: dark; }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; background: radial-gradient(1200px 600px at 20% -10%, #111828 0%, var(--bg) 50%) fixed;
-      color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    header {
-      position: sticky; top: 0; backdrop-filter: saturate(150%) blur(6px);
-      background: color-mix(in oklab, var(--bg) 80%, black 20% / 40%);
-      border-bottom: 1px solid var(--border); z-index: 10;
-    }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 1rem; }
-    .brand { display: flex; gap: .75rem; align-items: center; }
-    .brand .logo {
-      width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 4px 20px rgba(77,163,255,.3);
-    }
-    .brand h1 { margin: 0; font-size: 1.1rem; letter-spacing: .4px; }
-
-    main { max-width: var(--maxw); margin: 2rem auto; padding: 0 1rem 6rem; }
-    .card {
-      background: linear-gradient(180deg, color-mix(in oklab, var(--card), #141922 40%), var(--card));
-      border: 1px solid var(--border); border-radius: var(--radius);
-      box-shadow: 0 10px 40px rgba(0,0,0,.35);
-      overflow: clip;
-    }
-    .hero {
-      padding: 2rem; border-bottom: 1px solid var(--border);
-      background:
-        radial-gradient(600px 120px at 80% -10%, rgba(125, 211, 137, .22), transparent 70%),
-        radial-gradient(600px 120px at 0% 0%, rgba(77, 163, 255, .25), transparent 70%);
-    }
-    .hero h2 { margin: 0 0 .5rem 0; font-size: clamp(1.4rem, 2.2vw + 1rem, 2rem); }
-    .hero p { margin: 0; color: var(--muted); }
-
-    .meta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: .75rem; color: var(--muted); font-size: .9375rem; }
-
-    .grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; padding: 1.25rem; }
-    @media (min-width: 900px) {
-      .layout { display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; align-items: start; }
-      .grid { padding: 1.75rem 1.75rem 2.25rem; }
-    }
-
-    nav.toc { position: sticky; top: 84px; }
-    .toc .box {
-      background: color-mix(in oklab, var(--card), #0f131a 25%);
-      border: 1px solid var(--border); border-radius: 12px; padding: 1rem; font-size: .95rem;
-    }
-    .toc h3 { margin: 0 0 .5rem; font-size: 1rem; color: var(--muted); }
-    .toc a { display: block; padding: .3rem 0; color: var(--text); opacity: .85; }
-    .toc a:hover { opacity: 1; }
-
-    section { scroll-margin-top: 90px; }
-    h3 { margin: 1rem 0 .25rem; font-size: 1.15rem; }
-    h2 { font-size: 1.25rem; margin: 1.25rem 0 .5rem; }
-    p { margin: .5rem 0; }
-    ul { margin: .25rem 0 .75rem 1.25rem; }
-    li { margin: .25rem 0; }
-
-    .smaller { font-size: .95rem; color: var(--muted); }
-    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: .95em; padding: .15em .45em; border: 1px solid var(--border); border-radius: 6px; background: #0e1219; }
-
-    footer { border-top: 1px solid var(--border); margin-top: 2rem; }
-    .foot { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; align-items: center; justify-content: space-between; padding: 1.25rem; color: var(--muted); }
-    .top { text-align: right; }
-    .btn-top { display: inline-block; border: 1px solid var(--border); padding: .5rem .75rem; border-radius: 10px; }
-
-    /* Print tweaks */
-    @media print {
-      header, nav.toc, .top { display: none !important; }
-      body { background: white; color: #111; }
-      .card { box-shadow: none; border-color: #ccc; }
-      a { color: #0645ad; text-decoration: underline; }
-    }
+    body { margin:0; background: radial-gradient(1200px 600px at 20% -10%, #111828 0%, var(--bg) 50%) fixed; color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
+    header { position: sticky; top: 0; backdrop-filter: blur(6px); background: rgba(11,13,17,0.9); border-bottom:1px solid var(--border); z-index:10; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 1rem; display:flex; align-items:center; justify-content:space-between; }
+    nav a { margin-left:1rem; color:var(--muted); } nav a:hover { color: var(--accent-2); }
+    .logo { width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:0 4px 20px rgba(77,163,255,.3); }
+    main { max-width: var(--maxw); margin: 2rem auto; padding: 0 1rem 4rem; }
+    .hero { background: linear-gradient(180deg, #141922, var(--card)); border:1px solid var(--border); border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.35); padding: 2rem; }
+    .hero h1 { margin:0 0 .5rem 0; font-size: clamp(1.6rem, 2.4vw + 1rem, 2.2rem); }
+    .hero p { color: var(--muted); margin: 0; }
+    .grid { display:grid; gap:1.25rem; grid-template-columns: 1fr; margin-top:1.25rem; }
+    @media (min-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    .card { background: linear-gradient(180deg, #141922 0%, var(--card) 100%); border:1px solid var(--border); border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.35); padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between; }
+    .card h2 { margin:.25rem 0 .25rem; font-size:1.2rem; }
+    .card p { color: var(--muted); margin:0 0 1rem 0; }
+    .btn { display:inline-block; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:#0b0d11; font-weight:700; padding:.7rem 1rem; border-radius: 12px; text-align:center; }
+    .btn:hover { opacity:.9; text-decoration:none; }
+    footer { margin-top:2rem; border-top:1px solid var(--border); }
+    .foot { display:flex; flex-wrap:wrap; gap:.75rem 1.25rem; align-items:center; justify-content:space-between; padding:1.25rem; color:var(--muted); }
+    .foot nav a { margin-left:1rem; color:var(--accent); }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Privacy Policy • Mc Handyman LLC",
-    "url": "https://YOUR-GITHUB-PAGES-DOMAIN/privacy.html",
-    "description": "Privacy Policy for Mc Handyman LLC.",
-    "about": {
-      "@type": "Thing",
-      "name": "Privacy Policy"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Mc Handyman LLC"
-    }
-  }
-  </script>
 </head>
 <body>
   <header>
-    <div class="wrap brand" role="banner">
-      <div class="logo" aria-hidden="true"></div>
-      <h1>Mc Handyman LLC • Privacy Policy</h1>
+    <div class="wrap">
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <div class="logo" aria-hidden="true"></div>
+        <h1 style="margin:0;font-size:1.1rem;">Mc Handyman LLC</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main class="layout" id="top">
-    <aside class="toc" aria-label="Table of contents">
-      <div class="box">
-        <h3>On this page</h3>
-        <a href="#intro">Overview</a>
-        <a href="#info-collect">1. Information We Collect</a>
-        <a href="#use">2. How We Use Your Information</a>
-        <a href="#sms">3. SMS Communications</a>
-        <a href="#sharing">4. Information Sharing & Disclosures</a>
-        <a href="#security">5. Data Security</a>
-        <a href="#retention">6. Data Retention</a>
-        <a href="#rights">7. Your Privacy Rights</a>
-        <a href="#cookies">8. Cookies & Tracking</a>
-        <a href="#links">9. Third-Party Links</a>
-        <a href="#children">10. Children’s Privacy</a>
-        <a href="#updates">11. Updates to This Policy</a>
-        <a href="#contact">12. Contact Us</a>
-      </div>
-    </aside>
+  <main>
+    <section class="hero">
+      <h1>Your Trusted Handyman & Light Construction Partner</h1>
+      <p>Request service, read our Privacy Policy, and review our Terms — all in one place.</p>
+    </section>
 
-    <div class="card">
-      <div class="hero" id="intro">
+    <section class="grid" aria-label="Quick links">
+      <div class="card">
+        <h2>Request Service / Contact</h2>
+        <p>Questions, quotes, or project help — we’re here for you.</p>
+        <a class="btn" href="contact.html" aria-label="Go to Contact page">Go to Contact</a>
+      </div>
+      <div class="card">
         <h2>Privacy Policy</h2>
-        <p>Mc Handyman LLC ("we," "us," or "our") respects your privacy and is committed to protecting your personal information. This page explains how we collect, use, disclose, and protect information when you use our website, request estimates, or communicate with us, including via SMS text messages.</p>
-        <div class="meta">
-          <div><strong>Effective Date:</strong> <time datetime="2025-01-01">May 15th 2025</time></div>
-          <div><strong>Last Updated:</strong> <time datetime="2025-01-01">November 9th 2025</time></div>
-        </div>
+        <p>How we collect, use, and protect your information, including SMS consent.</p>
+        <a class="btn" href="privacy.html" aria-label="Read Privacy Policy">Read Privacy Policy</a>
       </div>
-
-      <div class="grid">
-        <section id="info-collect" aria-labelledby="h-collect">
-          <h2 id="h-collect">1. Information We Collect</h2>
-          <ul>
-            <li><strong>Personal Information:</strong> Your name, phone number, email address, physical address, and details provided when contacting us, scheduling service appointments, or requesting quotes.</li>
-            <li><strong>Service Information:</strong> Details related to the handyman or construction services you request or purchase.</li>
-            <li><strong>Communication Data:</strong> Content of communications you send to us via email, SMS, or online forms.</li>
-            <li><strong>Automatically Collected Information:</strong> Technical data such as IP address, browser type, device identifiers, and browsing behavior on our website.</li>
-            <li><strong>Cookies & Tracking Technologies:</strong> We use cookies and similar tools to improve website functionality and analyze site traffic.</li>
-          </ul>
-        </section>
-
-        <section id="use" aria-labelledby="h-use">
-          <h2 id="h-use">2. How We Use Your Information</h2>
-          <ul>
-            <li>Provide, schedule, and complete handyman and construction services.</li>
-            <li>Communicate regarding appointments, project updates, and service confirmations.</li>
-            <li>Respond to inquiries, provide estimates, and deliver customer support.</li>
-            <li>Send promotional offers, service reminders, or updates (if you have opted in).</li>
-            <li>Improve our website, operations, and customer experience.</li>
-            <li>Comply with applicable laws and regulations.</li>
-          </ul>
-        </section>
-
-        <section id="sms" aria-labelledby="h-sms">
-          <h2 id="h-sms">3. SMS Communications</h2>
-          <p>By providing your mobile phone number and opting in to receive text messages from <strong>Mc Handyman LLC</strong>, you consent to receive SMS communications related to our services, appointments, and promotions.</p>
-          <h3>3.1 Consent and Frequency</h3>
-          <ul>
-            <li>You acknowledge that you are <strong>consenting to receive SMS messages</strong> from Mc Handyman LLC.</li>
-            <li><strong>Message frequency</strong> will vary depending on your engagement with our business, including appointment confirmations, service updates, and offers.</li>
-            <li>Messages may be sent on a <strong>recurring basis</strong>, unless you choose to opt out.</li>
-          </ul>
-          <h3>3.2 Opt-Out and Assistance</h3>
-          <ul>
-            <li>Opt out at any time by replying <span class="kbd">STOP</span>.</li>
-            <li>For assistance, reply <span class="kbd">HELP</span> or contact us at <a href="mailto:support@mchandymanllc.com">support@mchandymanllc.com</a> or <a href="tel:4232182293">(423) 218-2293</a>.</li>
-            <li>After opting out, you may continue to receive transactional or service-related texts (e.g., appointment confirmations).</li>
-          </ul>
-          <h3>3.3 Message and Data Rates</h3>
-          <p>Standard <strong>message and data rates may apply</strong> according to your mobile carrier and plan.</p>
-          <h3>3.4 Data Privacy for SMS</h3>
-          <ul>
-            <li>We <strong>do not sell, rent, or share your phone number</strong> or SMS opt-in data with third parties for marketing purposes.</li>
-            <li><strong>Text messaging originator opt-in data and consent will not be shared</strong> with any third parties.</li>
-          </ul>
-        </section>
-
-        <section id="sharing" aria-labelledby="h-sharing">
-          <h2 id="h-sharing">4. Information Sharing & Disclosures</h2>
-          <ul>
-            <li><strong>Service Providers:</strong> With trusted contractors or vendors who assist in providing our services (e.g., scheduling, payments, communications).</li>
-            <li><strong>Affiliates:</strong> We may share personal data with affiliates or subsidiaries of Mc Handyman LLC for operational purposes. All affiliates are bound by this Privacy Policy.</li>
-            <li><strong>Legal Requirements:</strong> If required by law, subpoena, or government request.</li>
-          </ul>
-          <p>We do <strong>not sell or trade</strong> your personal information.</p>
-        </section>
-
-        <section id="security" aria-labelledby="h-security">
-          <h2 id="h-security">5. Data Security</h2>
-          <p>We implement reasonable technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of data transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
-        </section>
-
-        <section id="retention" aria-labelledby="h-retention">
-          <h2 id="h-retention">6. Data Retention</h2>
-          <p>We retain your information for as long as necessary to provide our services, comply with legal obligations, resolve disputes, and maintain accurate business records.</p>
-        </section>
-
-        <section id="rights" aria-labelledby="h-rights">
-          <h2 id="h-rights">7. Your Privacy Rights</h2>
-          <p>Depending on your location, you may have the right to:</p>
-          <ul>
-            <li>Request access to or a copy of the information we hold about you.</li>
-            <li>Request correction or deletion of your personal information.</li>
-            <li>Withdraw consent for certain types of processing, including marketing messages.</li>
-          </ul>
-          <p>To exercise these rights, contact us at <a href="mailto:info@mchandymanllc.com">info@mchandymanllc.com</a>.</p>
-        </section>
-
-        <section id="cookies" aria-labelledby="h-cookies">
-          <h2 id="h-cookies">8. Cookies & Tracking</h2>
-          <p>Our website uses cookies and similar technologies to enhance your browsing experience. You can adjust your browser settings to refuse cookies, but this may affect some website functionality.</p>
-        </section>
-
-        <section id="links" aria-labelledby="h-links">
-          <h2 id="h-links">9. Third-Party Links</h2>
-          <p>Our website may contain links to third-party sites. Mc Handyman LLC is not responsible for the content or privacy practices of those websites. We encourage you to review their privacy policies before providing any personal information.</p>
-        </section>
-
-        <section id="children" aria-labelledby="h-children">
-          <h2 id="h-children">10. Children’s Privacy</h2>
-          <p>Our services are not directed toward individuals under the age of 13. We do not knowingly collect personal information from minors. If such data is inadvertently collected, it will be promptly deleted.</p>
-        </section>
-
-        <section id="updates" aria-labelledby="h-updates">
-          <h2 id="h-updates">11. Updates to This Policy</h2>
-          <p>We may update this Privacy Policy periodically to reflect changes in our practices, technology, or legal obligations. Updated versions will include a new “Last Updated” date at the top of this page.</p>
-        </section>
-
-        <section id="contact" aria-labelledby="h-contact">
-          <h2 id="h-contact">12. Contact Us</h2>
-          <address class="smaller">
-            <strong>Mc Handyman LLC</strong><br>
-            Address: <span>4855 Freewill Rd Nw Cleveland, TN 37312</span><br>
-            Email: <a href="mailto:support@mchandymanllc.com">support@mchandymanllc.com</a><br>
-            Phone: <a href="tel:4232182293">(423) 218-2293</a><br>
-          </address>
-        </section>
+      <div class="card">
+        <h2>Terms of Service</h2>
+        <p>The legal terms that apply when you use our website and services.</p>
+        <a class="btn" href="terms.html" aria-label="Read Terms of Service">Read Terms of Service</a>
       </div>
+    </section>
 
-      <footer>
-        <div class="foot">
-          <div>© <span id="year"></span> Mc Handyman LLC • All rights reserved.</div>
-          <div class="top"><a class="btn-top" href="#top" aria-label="Back to top">↑ Back to top</a></div>
-        </div>
-      </footer>
-    </div>
+    <footer>
+      <div class="foot">
+        <div>© <span id="year"></span> Mc Handyman LLC • All rights reserved.</div>
+        <nav>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
   </main>
 
-  <script>
-    // Update footer year automatically
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
