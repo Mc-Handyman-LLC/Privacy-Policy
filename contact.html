@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact • Mc Handyman LLC</title>
-  <meta name="description" content="Contact page for Mc Handyman LLC — request service, quotes, or support." />
+  <meta name="description" content="Contact Mc Handyman LLC — request service, quotes, or support." />
   <link rel="canonical" href="https://YOUR-GITHUB-PAGES-DOMAIN/contact.html" />
   <style>
     :root { --bg:#0b0d11; --card:#11151b; --text:#e7ecf3; --muted:#a7b0bf; --accent:#4da3ff; --accent-2:#7bd389; --border:#222838; --maxw:980px; --radius:16px; }
     html { color-scheme: dark; }
-    body { margin: 0; background: radial-gradient(1200px 600px at 20% -10%, #111828 0%, var(--bg) 50%) fixed; color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    body { margin:0; background: radial-gradient(1200px 600px at 20% -10%, #111828 0%, var(--bg) 50%) fixed; color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
     a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
     header { position: sticky; top: 0; backdrop-filter: blur(6px); background: rgba(11,13,17,0.9); border-bottom: 1px solid var(--border); z-index: 10; }
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
@@ -19,16 +19,10 @@
     .card { background: linear-gradient(180deg, #141922 0%, var(--card) 100%); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.35); overflow: hidden; }
     .hero { padding: 2rem; border-bottom: 1px solid var(--border); background: radial-gradient(600px 120px at 80% -10%, rgba(125,211,137,.22), transparent 70%), radial-gradient(600px 120px at 0% 0%, rgba(77,163,255,.25), transparent 70%); }
     .hero h2 { margin: 0 0 .5rem 0; font-size: clamp(1.4rem, 2.2vw + 1rem, 2rem); } .hero p { color: var(--muted); }
-    form { display: grid; gap: 1rem; padding: 2rem; }
-    label { display: block; font-weight: 600; margin-bottom: .25rem; }
-    input, textarea { width: 100%; background: #0e1219; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: .75rem; font-size: 1rem; }
-    textarea { min-height: 120px; resize: vertical; }
-    button { background: linear-gradient(135deg, var(--accent), var(--accent-2)); border: none; padding: .75rem 1.25rem; color: #fff; font-weight: 600; border-radius: 10px; cursor: pointer; }
-    button:hover { opacity: .9; }
-    .info { padding: 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .95rem; }
-    .info a { color: var(--accent-2); }
+    .grid { display: grid; gap: 1.25rem; padding: 1.25rem; }
+    section { scroll-margin-top: 90px; } h2 { font-size: 1.25rem; margin: 1.25rem 0 .5rem; } ul { margin:.25rem 0 .75rem 1.25rem; } li { margin:.25rem 0; }
     footer { border-top: 1px solid var(--border); margin-top: 2rem; }
-    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 1.25rem; color: var(--muted); }
+    .foot { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding:1.25rem; color:var(--muted); }
     .foot nav a { margin-left: 1rem; color: var(--accent); }
   </style>
 </head>
@@ -43,47 +37,24 @@
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
+        <a href="legal.html">Legal & Policies</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <div class="card">
-      <div class="hero">
-        <h2>Contact Mc Handyman LLC</h2>
-        <p>Have a question or need a quote? Fill out the form below or reach us directly using the contact information provided.</p>
-      </div>
+  <main id="top"><div class="card"><div class="hero"><h2>Contact Mc Handyman LLC</h2><p>Have a question or need a quote? Use the form below.</p></div>
+    <form name="contact" method="POST" data-netlify="true" style="display:grid;gap:1rem;padding:2rem;">
+      <input type="hidden" name="form-name" value="contact" />
+      <p><label for="name">Full Name</label><input id="name" name="name" type="text" required /></p>
+      <p><label for="email">Email Address</label><input id="email" name="email" type="email" required /></p>
+      <p><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" /></p>
+      <p><label for="message">Message</label><textarea id="message" name="message" required></textarea></p>
+      <p><button type="submit" style="background:linear-gradient(135deg,var(--accent),var(--accent-2));border:none;padding:.75rem 1.25rem;color:#fff;font-weight:600;border-radius:10px;cursor:pointer;">Send Message</button></p>
+    </form>
+    <div style="padding:2rem;border-top:1px solid var(--border);color:var(--muted);"><p><strong>Email:</strong> <a href="mailto:info@mchandymanllc.com">info@mchandymanllc.com</a></p><p><strong>Phone:</strong> <a href="tel:[Insert Phone]">[Insert Phone]</a></p><p><strong>Address:</strong> [Insert Address]</p></div>
+    <footer><div class="foot"><div>© <span id="year"></span> Mc Handyman LLC</div><nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></footer></div></main>
 
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact" />
-        <p><label for="name">Full Name</label><input id="name" name="name" type="text" required /></p>
-        <p><label for="email">Email Address</label><input id="email" name="email" type="email" required /></p>
-        <p><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" /></p>
-        <p><label for="message">Message</label><textarea id="message" name="message" placeholder="Describe your request or project..." required></textarea></p>
-        <p><button type="submit">Send Message</button></p>
-      </form>
-
-      <div class="info">
-        <p><strong>Email:</strong> <a href="mailto:info@mchandymanllc.com">info@mchandymanllc.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:[Insert Phone Number]">[Insert Phone Number]</a></p>
-        <p><strong>Address:</strong> [Insert Business Address]</p>
-        <p>Our team is available Monday through Friday, 8:00 AM – 6:00 PM (local time). We aim to respond to all inquiries within 24 hours.</p>
-      </div>
-
-      <footer>
-        <div class="foot">
-          <div>© <span id="year"></span> Mc Handyman LLC • All rights reserved.</div>
-          <nav>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="contact.html">Contact</a>
-          </nav>
-        </div>
-      </footer>
-    </div>
-  </main>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());</script>
 </body>
 </html>
