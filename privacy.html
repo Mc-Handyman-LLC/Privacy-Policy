@@ -8,29 +8,72 @@
   <link rel="canonical" href="https://YOUR-DOMAIN/privacy.html" />
   <style>
     :root {
-      --bg:#0b0d11;
-      --card:#11151b;
-      --text:#e7ecf3;
-      --muted:#a7b0bf;
-      --accent:#4da3ff;
-      --accent-2:#7bd389;
-      --border:#222838;
+      --bg:#0b0d11; --card:#11151b; --text:#e7ecf3; --muted:#a7b0bf;
+      --accent:#4da3ff; --accent-2:#7bd389; --border:#222838;
+      --radius:14px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:1100px;margin-inline:auto;padding:2rem 1rem;display:grid;grid-template-columns:280px 1fr;gap:1.5rem}
-    @media (max-width: 900px){.wrap{grid-template-columns:1fr} .toc{position:static; top:auto}}
-    header.page{margin:0 0 1rem 0;padding:1.25rem;border:1px solid var(--border);background:linear-gradient(180deg, rgba(77,163,255,.12), transparent 50%), var(--card);border-radius:14px}
-    header.page h1{margin:0 0 .25rem 0;font-size:1.875rem;color:var(--accent)}
-    header.page p{margin:.25rem 0;color:var(--muted)}
-    .toc{position:sticky;top:1rem;height:max-content;border:1px solid var(--border);background:var(--card);padding:1rem;border-radius:14px}
-    .toc h2{margin:.25rem 0 0.5rem 0;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+    /* Shared top navigation */
+    .site-nav{position:sticky;top:0;z-index:50;background:rgba(11,13,17,.8);
+      backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
+    .site-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;
+      justify-content:space-between;padding:.75rem 1rem}
+    .brand{display:flex;align-items:center;gap:.75rem;font-weight:700;color:var(--text);text-decoration:none}
+    .brand img{height:40px;width:auto;border-radius:8px;display:block}
+    .nav-links{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+    .nav-links a{padding:.4rem .6rem;border-radius:8px;border:1px solid transparent}
+    .nav-links a[aria-current="page"]{background:rgba(77,163,255,.12);border-color:var(--border)}
+    .nav-links a:hover{background:rgba(77,163,255,.08)}
+    @media (max-width:720px){ .nav-links{gap:.5rem} }
+
+    /* GRID: left rail (sticky) + right rail (scrolls) */
+    .wrap{
+      max-width:1100px; margin-inline:auto; padding:2rem 1rem;
+      display:grid; grid-template-columns:280px 1fr; gap:1.5rem;
+    }
+
+    /* LEFT COLUMN: entire column is sticky */
+    .left-rail{
+      grid-column:1; position:sticky; top:4.25rem; align-self:start;
+      display:flex; flex-direction:column; gap:1rem;
+    }
+
+    /* TOC */
+    .toc{
+      border:1px solid var(--border); background:var(--card);
+      padding:1rem; border-radius:var(--radius);
+    }
+    .toc h2{margin:.25rem 0 .5rem 0;font-size:1rem;color:var(--muted);
+      text-transform:uppercase;letter-spacing:.08em}
     .toc ol{margin:.5rem 0 0 1rem;padding:0}
     .toc li{margin:.25rem 0}
-    main{border:1px solid var(--border);background:var(--card);padding:1.25rem;border-radius:14px}
-    section{padding:1rem 0;border-top:1px solid var(--border);scroll-margin-top: 90px;}
+
+    /* Date box BELOW the TOC */
+    .update-info{
+      background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+      padding:1rem; color:var(--muted); font-size:.95rem; box-shadow:0 2px 6px rgba(0,0,0,.25);
+    }
+    .update-info strong{ color:var(--accent-2); }
+
+    /* RIGHT COLUMN: only this side scrolls */
+    .right-rail{
+      grid-column:2; height:calc(100vh - 5rem); overflow-y:auto; padding-right:.5rem;
+      scroll-behavior:smooth;
+    }
+
+    /* Content panel inside right rail */
+    header.page{margin:0 0 1rem 0;padding:1.25rem;border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(77,163,255,.12), transparent 50%), var(--card);
+      border-radius:var(--radius)}
+    header.page h1{margin:0 0 .25rem 0;font-size:1.875rem;color:var(--accent)}
+    header.page p{margin:.25rem 0;color:var(--muted)}
+    main{border:1px solid var(--border);background:var(--card);padding:1.25rem;border-radius:var(--radius)}
+    section{padding:1rem 0;border-top:1px solid var(--border);scroll-margin-top:90px;}
     section:first-of-type{border-top:none;padding-top:0}
     h2{font-size:1.25rem;margin:.25rem 0 .5rem 0;color:var(--accent)}
     h3{font-size:1.05rem;margin:.5rem 0 .25rem 0;color:var(--accent-2)}
@@ -38,73 +81,75 @@
     ul{margin:.5rem 0 .5rem 1.25rem}
     .note{font-size:.9rem;color:var(--muted)}
     footer{max-width:1100px;margin:1rem auto 3rem auto;padding:0 1rem;color:var(--muted)}
-  
-/* Shared top navigation styles */
-.site-nav{position:sticky;top:0;z-index:50;background:rgba(11,13,17,.8);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
-.site-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem}
-.brand{display:flex;align-items:center;gap:.5rem;font-weight:700;color:var(--text)}
-.brand-badge{width:28px;height:28px;border-radius:8px;display:inline-grid;place-items:center;background:linear-gradient(135deg, rgba(77,163,255,.3), rgba(123,211,137,.25));border:1px solid var(--border)}
-.brand-badge span{font-size:.9rem;color:var(--text)}
-.nav-links{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
-.nav-links a{padding:.4rem .6rem;border-radius:8px;border:1px solid transparent}
-.nav-links a[aria-current="page"]{background:rgba(77,163,255,.12);border-color:var(--border)}
-.nav-links a:hover{background:rgba(77,163,255,.08)}
-@media (max-width: 720px){
-  .nav-links{gap:.5rem}
-  .brand span.title{display:none}
-}
 
-</style>
+    /* Make right rail the scroller and avoid double scroll */
+    body{ overflow:hidden; }
+
+    /* Mobile: stack and use normal page scroll */
+    @media (max-width:900px){
+      .wrap{ grid-template-columns:1fr; }
+      .left-rail, .right-rail{ position:static; height:auto; overflow:visible; }
+      body{ overflow:auto; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Shared top navigation -->
+  <!-- Shared top navigation (no nested anchors) -->
   <header class="site-nav" role="banner">
     <div class="site-nav-inner">
-      <a class="brand" href="/">
-        <a href="index.html" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;">
-          <img src="images/logo.png" alt="Mc Handyman LLC logo" style="height:40px;width:auto;border-radius:8px;" />
-          <h1 style="margin:0;font-size:1.1rem;color:#e7ecf3;">Mc Handyman LLC</h1>
-        </a>
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Mc Handyman LLC logo" />
+        <span>Mc Handyman LLC</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="/" title="Home">Home</a>
-        <a href="/services.html" title="Services">Services</a>
-        <a href="/terms.html" title="Terms of Service">Terms</a>
-        <a href="/privacy.html" aria-current="page" title="Privacy Policy">Privacy</a>
-        <a href="/contact.html" title="Contact">Contact</a>
+        <a href="index.html" title="Home">Home</a>
+        <a href="services.html" title="Services">Services</a>
+        <a href="terms.html" title="Terms of Service">Terms</a>
+        <a href="privacy.html" aria-current="page" title="Privacy Policy">Privacy</a>
+        <a href="contact.html" title="Contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <div class="wrap">
-    <nav class="toc" aria-label="On this page">
-      <h2>Contents</h2>
-      <ol>
-        <li><a href="#intro">Intro</a></li>
-        <li><a href="#info-collect">1. Information We Collect</a></li>
-        <li><a href="#use">2. How We Use Your Information</a></li>
-        <li><a href="#sms">3. SMS Communications</a></li>
-        <li><a href="#sharing">4. Information Sharing &amp; Disclosures</a></li>
-        <li><a href="#security">5. Data Security</a></li>
-        <li><a href="#retention">6. Data Retention</a></li>
-        <li><a href="#rights">7. Your Privacy Rights</a></li>
-        <li><a href="#cookies">8. Cookies &amp; Tracking</a></li>
-        <li><a href="#links">9. Third-Party Links</a></li>
-        <li><a href="#children">10. Children’s Privacy</a></li>
-        <li><a href="#updates">11. Updates to This Policy</a></li>
-        <li><a href="#contact">12. Contact Us</a></li>
-      </ol>
-    </nav>
+    <!-- LEFT column (pinned) -->
+    <div class="left-rail">
+      <nav class="toc" aria-label="On this page">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#info-collect">1. Information We Collect</a></li>
+          <li><a href="#use">2. How We Use Your Information</a></li>
+          <li><a href="#sms">3. SMS Communications</a></li>
+          <li><a href="#sharing">4. Information Sharing &amp; Disclosures</a></li>
+          <li><a href="#security">5. Data Security</a></li>
+          <li><a href="#retention">6. Data Retention</a></li>
+          <li><a href="#rights">7. Your Privacy Rights</a></li>
+          <li><a href="#cookies">8. Cookies &amp; Tracking</a></li>
+          <li><a href="#links">9. Third-Party Links</a></li>
+          <li><a href="#children">10. Children’s Privacy</a></li>
+          <li><a href="#updates">11. Updates to This Policy</a></li>
+          <li><a href="#contact">12. Contact Us</a></li>
+        </ol>
+      </nav>
 
-    <div>
+      <!-- Date box under TOC -->
+      <div class="update-info">
+        <p>
+          <strong>Effective Date:</strong>
+          <time datetime="2025-05-15">May 15, 2025</time><br />
+          <strong>Last Edited:</strong>
+          <time id="lastEdited"></time>
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT column (scrolls) -->
+    <div class="right-rail">
       <header class="page" id="intro">
         <h1>Privacy Policy — Mc Handyman LLC</h1>
         <p>Mc Handyman LLC ("we," "us," or "our") respects your privacy and is committed to protecting your personal information. This page explains how we collect, use, disclose, and protect information when you use our website, request estimates, or communicate with us, including via SMS text messages.</p>
-        <p class="note">
-          Effective date: <time datetime="2025-11-11">November 11, 2025</time> •
-          Last updated: <time datetime="2025-11-11">November 11, 2025</time>
-        </p>
       </header>
 
       <main>
@@ -222,7 +267,30 @@
   </div>
 
   <script>
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Auto-fill "Last Edited" dates (header + box)
+    const lastEdited = new Date(document.lastModified);
+    const opts = { year: "numeric", month: "long", day: "numeric" };
+    const boxEl = document.getElementById("lastEdited");
+    const headerEl = document.getElementById("headerLastUpdated");
+    if (boxEl) boxEl.textContent = lastEdited.toLocaleDateString("en-US", opts);
+    if (headerEl) headerEl.textContent = lastEdited.toLocaleDateString("en-US", opts);
+
+    // Make TOC links scroll the right-rail panel instead of the page
+    const rightRail = document.querySelector('.right-rail');
+    document.querySelectorAll('.toc a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (!rightRail || !target) return;
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top - rightRail.getBoundingClientRect().top + rightRail.scrollTop - 8;
+        rightRail.scrollTo({ top, behavior: 'smooth' });
+        history.replaceState(null, '', '#' + id);
+      });
+    });
   </script>
 </body>
 </html>
