@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services • Mc Handyman LLC</title>
+  <meta name="description" content="Handyman & light construction services. Browse categories and request a quote." />
+  <link rel="canonical" href="https://YOUR-DOMAIN/services.html" />
+  <style>
+    :root {
+      --bg:#0b0d11;
+      --card:#11151b;
+      --text:#e7ecf3;
+      --muted:#a7b0bf;
+      --accent:#4da3ff;
+      --accent-2:#7bd389;
+      --border:#222838;
+      --radius:14px;
+      --accent-3:#c9d6ff;
+      --accent-4:#9cf0c1;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Shared top navigation (assumes global) */
+    .site-nav{position:sticky;top:0;z-index:50;background:rgba(11,13,17,.8);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
+    .site-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem}
+    .brand{display:flex;align-items:center;gap:.5rem;font-weight:700;color:var(--text)}
+    .brand-badge{width:28px;height:28px;border-radius:8px;display:inline-grid;place-items:center;background:linear-gradient(135deg, rgba(77,163,255,.3), rgba(123,211,137,.25));border:1px solid var(--border)}
+    .brand-badge span{font-size:.9rem;color:var(--text)}
+    .nav-links{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+    .nav-links a{padding:.4rem .6rem;border-radius:8px;border:1px solid transparent}
+    .nav-links a[aria-current="page"]{background:rgba(77,163,255,.12);border-color:var(--border)}
+    .nav-links a:hover{background:rgba(77,163,255,.08)}
+    @media (max-width: 720px){
+      .nav-links{gap:.5rem}
+      .brand span.title{display:none}
+    }
+
+    /* Page layout */
+    .wrap{max-width:1100px;margin-inline:auto;padding:1.25rem}
+    .hero{margin-top:1rem;border:1px solid var(--border);border-radius:var(--radius);background:
+      radial-gradient(600px 180px at 85% -20%, rgba(123,211,137,.18), transparent 70%),
+      radial-gradient(700px 220px at 0% 0%, rgba(77,163,255,.22), transparent 70%),
+      var(--card);
+      padding:2rem 1.25rem;
+    }
+    .hero h1{margin:0 0 .35rem 0;font-size:clamp(1.6rem, 1.6rem + 1.5vw, 2.2rem);color:var(--accent)}
+    .hero p{margin:.25rem 0;color:var(--muted)}
+
+    .grid{display:grid;gap:1.25rem;margin-top:1.25rem;grid-template-columns:repeat(12,1fr)}
+    .service-card{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;flex-direction:column;gap:.5rem}
+    @media (min-width: 860px){ .service-card{grid-column:span 6} }
+    .service-card h2{margin:0;font-size:1.15rem;color:var(--accent);display:flex;align-items:center;gap:.55rem}
+    .icon{width:22px;height:22px;display:inline-flex}
+    .icon svg{width:22px;height:22px;display:block}
+    .icon.blue svg{fill:var(--accent)}
+    .icon.green svg{fill:var(--accent-2)}
+    .icon.soft svg{fill:var(--accent-3)}
+    .icon.mint svg{fill:var(--accent-4)}
+    .service-card p{margin:.25rem 0;color:var(--text)}
+    .service-card ul{margin:.4rem 0 .4rem 1.25rem;color:var(--muted)}
+    .price{display:inline-block;margin-top:.5rem;padding:.35rem .6rem;border-radius:10px;border:1px solid var(--border);background:#0f1217;color:var(--muted);font-weight:600}
+
+    footer{margin:2rem 0 3rem;border-top:1px solid var(--border)}
+    .foot{max-width:1100px;margin:0 auto;padding:1rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+    .foot nav a{margin-left:1rem}
+  </style>
+</head>
+<body>
+
+  <!-- Shared header / navigation -->
+  <header class="site-nav" role="banner">
+    <div class="site-nav-inner">
+      <a class="brand" href="/">
+        <span class="brand-badge"><span>MH</span></span>
+        <span class="title">Mc Handyman LLC</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/" title="Home">Home</a>
+        <a href="/services.html" aria-current="page" title="Services">Services</a>
+        <a href="/terms.html" title="Terms of Service">Terms</a>
+        <a href="/privacy.html" title="Privacy Policy">Privacy</a>
+        <a href="/contact.html" title="Contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="top">
+    <section class="hero">
+      <h1>Our Services</h1>
+      <p>Browse our most requested handyman and light construction services. Easily editable and ready to customize for your business.</p>
+    </section>
+
+    <section class="grid" aria-label="Service categories">
+      <!-- General Handyman: wrench -->
+      <article class="service-card" id="general-handyman">
+        <h2>
+          <span class="icon blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M21.6 6.4a6 6 0 0 1-8.24 7.55l-6.1 6.1a1.75 1.75 0 0 1-2.47-2.48l6.1-6.1A6 6 0 0 1 17.6 2.4l-2.6 2.6 4 4 2.6-2.6Z"/>
+            </svg>
+          </span>
+          General Handyman
+        </h2>
+        <p>Small fixes and quick improvements for home or office.</p>
+        <ul>
+          <li>Minor drywall patching &amp; paint touch-ups</li>
+          <li>Door &amp; trim repairs, hardware installs</li>
+          <li>TV mounting, shelving, caulking</li>
+        </ul>
+        <span class="price">Starting at $99</span>
+      </article>
+
+      <!-- Carpentry: saw blade -->
+      <article class="service-card" id="carpentry">
+        <h2>
+          <span class="icon green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M12 2a1 1 0 0 1 .9.56l.77 1.53 1.7-.4a1 1 0 0 1 1 .27l1 1a1 1 0 0 1 .27 1l-.4 1.7 1.53.77A1 1 0 0 1 19 10l-1.67.33.33 1.67a1 1 0 0 1-.56 1.1l-1.53.77.4 1.7a1 1 0 0 1-.27 1l-1 1a1 1 0 0 1-1 .27l-1.7-.4-.77 1.53A1 1 0 0 1 10 22l-.33-1.67L8 20a1 1 0 0 1-1.1-.56l-.77-1.53-1.7.4a1 1 0 0 1-1-.27l-1-1a1 1 0 0 1-.27-1l.4-1.7L.93 12.8A1 1 0 0 1 1 12l1.67-.33L2.33 10a1 1 0 0 1 .56-1.1l1.53-.77-.4-1.7a1 1 0 0 1 .27-1l1-1a1 1 0 0 1 1-.27l1.7.4.77-1.53A1 1 0 0 1 12 2Z"/>
+            </svg>
+          </span>
+          Carpentry &amp; Woodwork
+        </h2>
+        <p>Custom builds and repairs that stand the test of time.</p>
+        <ul>
+          <li>Soffit &amp; fascia repairs</li>
+          <li>Trim, baseboards, and casing</li>
+          <li>Built-ins, shelving, framing repairs</li>
+        </ul>
+        <span class="price">Starting at $149</span>
+      </article>
+
+      <!-- Flooring: tile/grid -->
+      <article class="service-card" id="flooring">
+        <h2>
+          <span class="icon soft" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M3 3h8v8H3V3Zm0 10h8v8H3v-8Zm10-10h8v8h-8V3Zm0 10h8v8h-8v-8Z"/>
+            </svg>
+          </span>
+          Flooring
+        </h2>
+        <p>Durable, cleanly installed floors for any space.</p>
+        <ul>
+          <li>Laminate &amp; LVP installation</li>
+          <li>Subfloor repairs &amp; transitions</li>
+          <li>Thresholds &amp; trim</li>
+        </ul>
+        <span class="price">Starting at $2.50/sq ft</span>
+      </article>
+
+      <!-- Drywall & Painting: paint roller -->
+      <article class="service-card" id="drywall-paint">
+        <h2>
+          <span class="icon blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M3 5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H9v3.59l2.3 2.3a1 1 0 0 1-1.42 1.42l-2.59-2.6A2 2 0 0 1 6 12V9H5a2 2 0 0 1-2-2V5Zm13 8a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-2v4a2 2 0 1 1-2-2v-3Z"/>
+            </svg>
+          </span>
+          Drywall &amp; Painting
+        </h2>
+        <p>From patches to full-room refreshes.</p>
+        <ul>
+          <li>Drywall hanging, taping, and finishing</li>
+          <li>Prime &amp; paint (walls, ceilings, trim)</li>
+          <li>Texture matching</li>
+        </ul>
+        <span class="price">Starting at $199</span>
+      </article>
+
+      <!-- Exterior & Deck: house -->
+      <article class="service-card" id="exterior">
+        <h2>
+          <span class="icon mint" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M4 10.5 12 4l8 6.5V20a2 2 0 0 1-2 2h-4v-6H10v6H6a2 2 0 0 1-2-2v-9.5Z"/>
+            </svg>
+          </span>
+          Exterior &amp; Deck
+        </h2>
+        <p>Repairs and maintenance to protect your home.</p>
+        <ul>
+          <li>Deck repairs &amp; board replacement</li>
+          <li>Railing, steps, and handrails</li>
+          <li>Fence &amp; gate repairs</li>
+        </ul>
+        <span class="price">Starting at $199</span>
+      </article>
+
+      <!-- Fixtures & Installations: lightbulb -->
+      <article class="service-card" id="fixtures">
+        <h2>
+          <span class="icon green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M12 2a7 7 0 0 1 4.9 12l-.4.36A4 4 0 0 0 15 18h-6a4 4 0 0 0-1.5-3.64l-.4-.36A7 7 0 0 1 12 2Zm-3 18h6a1 1 0 0 1 1 1 2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2 1 1 0 0 1 1-1Z"/>
+            </svg>
+          </span>
+          Fixtures &amp; Installations
+        </h2>
+        <p>Clean, professional installs done right.</p>
+        <ul>
+          <li>Vanities, faucets, toilets (minor plumbing)</li>
+          <li>Light fixtures &amp; ceiling fans (minor electrical)</li>
+          <li>Smart locks, doorbells, and hardware</li>
+        </ul>
+        <span class="price">Starting at $129</span>
+      </article>
+    </section>
+
+    <footer>
+      <div class="foot">
+        <div>© <span id="year"></span> Mc Handyman LLC • All rights reserved.</div>
+        <nav><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></nav>
+      </div>
+    </footer>
+  </main>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
