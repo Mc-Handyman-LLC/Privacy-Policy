@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mc Handyman LLC</title>
+<<<<<<< Updated upstream
   <meta name="description" content="Mc Handyman LLC — Handyman & light construction services. Contact us, view our Privacy Policy and Terms of Service." />
   <link rel="canonical" href="https://YOUR-GITHUB-PAGES-DOMAIN/index.html" />
   <style>
@@ -43,10 +44,86 @@
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
         <a href="contact.html">Contact</a>
+=======
+  <meta name="description" content="Handyman & light construction services in Tennessee. Contact, Privacy Policy, Terms of Service, and Legal Hub." />
+  <link rel="canonical" href="https://YOUR-DOMAIN/index.html" />
+  <style>
+    :root {
+      --bg:#0b0d11;
+      --card:#11151b;
+      --text:#e7ecf3;
+      --muted:#a7b0bf;
+      --accent:#4da3ff;
+      --accent-2:#7bd389;
+      --border:#222838;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Shared top navigation (matches terms/privacy) */
+    .site-nav{position:sticky;top:0;z-index:50;background:rgba(11,13,17,.8);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
+    .site-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem}
+    .brand{display:flex;align-items:center;gap:.5rem;font-weight:700;color:var(--text)}
+    .brand-badge{width:28px;height:28px;border-radius:8px;display:inline-grid;place-items:center;background:linear-gradient(135deg, rgba(77,163,255,.3), rgba(123,211,137,.25));border:1px solid var(--border)}
+    .brand-badge span{font-size:.9rem;color:var(--text)}
+    .nav-links{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+    .nav-links a{padding:.4rem .6rem;border-radius:8px;border:1px solid transparent}
+    .nav-links a[aria-current="page"]{background:rgba(77,163,255,.12);border-color:var(--border)}
+    .nav-links a:hover{background:rgba(77,163,255,.08)}
+    @media (max-width: 720px){
+      .nav-links{gap:.5rem}
+      .brand span.title{display:none}
+    }
+
+    /* Page layout */
+    .wrap{max-width:1100px;margin-inline:auto;padding:1.25rem}
+    .hero{margin-top:1rem;border:1px solid var(--border);border-radius:14px;background:
+      radial-gradient(600px 180px at 85% -20%, rgba(123,211,137,.18), transparent 70%),
+      radial-gradient(700px 220px at 0% 0%, rgba(77,163,255,.22), transparent 70%),
+      var(--card);
+      padding:2rem 1.25rem;
+    }
+    .hero h1{margin:0 0 .35rem 0;font-size:clamp(1.6rem, 1.6rem + 1.5vw, 2.2rem);color:var(--accent)}
+    .hero p{margin:.25rem 0;color:var(--muted)}
+
+    .grid{display:grid;gap:1.25rem;margin-top:1.25rem;grid-template-columns:repeat(12,1fr)}
+    .card{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.25rem}
+    @media (min-width: 820px){
+      .card{grid-column:span 6}
+    }
+    .card h2{margin:.25rem 0 .35rem 0;font-size:1.15rem;color:var(--accent)}
+    .btn{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b0d11;font-weight:700;padding:.7rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+    .btn:hover{text-decoration:none;filter:brightness(1.05)}
+
+    footer{margin:2rem 0 3rem;border-top:1px solid var(--border)}
+    .foot{max-width:1100px;margin:0 auto;padding:1rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+    .foot nav a{margin-left:1rem}
+  </style>
+</head>
+<body>
+
+  <!-- Shared header / navigation -->
+  <header class="site-nav" role="banner">
+    <div class="site-nav-inner">
+      <a class="brand" href="/">
+        <span class="brand-badge"><span>MH</span></span>
+        <span class="title">Mc Handyman LLC</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/" aria-current="page" title="Home">Home</a>
+        <a href="/services.html" title="Services">Services</a>
+        <a href="/terms.html" title="Terms of Service">Terms</a>
+        <a href="/privacy.html" title="Privacy Policy">Privacy</a>
+        <a href="/contact.html" title="Contact">Contact</a>
+>>>>>>> Stashed changes
       </nav>
     </div>
   </header>
 
+<<<<<<< Updated upstream
   <main>
     <section class="hero">
       <h1>Your Trusted Handyman & Light Construction Partner</h1>
@@ -70,19 +147,62 @@
         <a class="btn" href="terms.html" aria-label="Read Terms of Service">Read Terms of Service</a>
       </div>
     </section>
+=======
+  <main class="wrap">
+    <section class="hero">
+      <h1>Your Trusted Handyman & Light Construction Partner</h1>
+      <p>Request service, read our Privacy Policy, review Terms, or explore our Legal & Policy Center.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Contact</h2>
+        <p>Questions, quotes, or project help — we’re here.</p>
+        <p><a class="btn" href="/contact.html">Go to Contact</a></p>
+      </section>
+
+      <section class="card">
+        <h2>Privacy Policy</h2>
+        <p>How we handle your data and SMS consent.</p>
+        <p><a class="btn" href="/privacy.html">Read Privacy</a></p>
+      </section>
+
+      <section class="card">
+        <h2>Terms of Service</h2>
+        <p>The legal terms for using our services.</p>
+        <p><a class="btn" href="/terms.html">Read Terms</a></p>
+      </section>
+
+      <section class="card">
+        <h2>Legal &amp; Policies</h2>
+        <p>All legal docs in one place.</p>
+        <p><a class="btn" href="/legal.html">Open Legal Hub</a></p>
+      </section>
+    </div>
+>>>>>>> Stashed changes
 
     <footer>
       <div class="foot">
         <div>© <span id="year"></span> Mc Handyman LLC • All rights reserved.</div>
+<<<<<<< Updated upstream
         <nav>
           <a href="privacy.html">Privacy</a>
           <a href="terms.html">Terms</a>
           <a href="contact.html">Contact</a>
         </nav>
+=======
+        <nav><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></nav>
+>>>>>>> Stashed changes
       </div>
     </footer>
   </main>
 
+<<<<<<< Updated upstream
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+=======
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+>>>>>>> Stashed changes
 </body>
 </html>
