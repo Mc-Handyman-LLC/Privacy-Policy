@@ -63,7 +63,12 @@
     /* RIGHT COLUMN: only this side scrolls */
     .right-rail{
       grid-column:2; height:calc(100vh - 5rem); overflow-y:auto; padding-right:.5rem;
-      scroll-behavior:smooth;
+      scroll-behavior:smooth; scrollbar-width: none;  -ms-overflow-style: none;
+    }
+
+    .right-rail::-webkit-scrollbar{
+      width: 0;
+      height: 0;                   /* WebKit (Chrome/Safari/Chromium Edge) */
     }
 
     /* Content panel inside right rail */
