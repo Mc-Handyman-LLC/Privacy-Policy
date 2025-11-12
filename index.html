@@ -7,40 +7,82 @@
   <meta name="description" content="Mc Handyman LLC — Handyman & light construction services. Contact us, view our Privacy Policy and Terms of Service." />
   <link rel="canonical" href="https://YOUR-GITHUB-PAGES-DOMAIN/index.html" />
   <style>
-    :root { --bg:#0b0d11; --card:#11151b; --text:#e7ecf3; --muted:#a7b0bf; --accent:#4da3ff; --accent-2:#7bd389; --border:#222838; --maxw:980px; --radius:16px; }
+    :root { --bg:#0b0d11; --card:#11151b; --text:#e7ecf3; --muted:#a7b0bf; --accent:#4da3ff; --accent-2:#7aa2f8; --accent-3: #4da3ff1f; --accent-4: #4da3ff14; --border:#222838; --maxw:1100px; --radius:16px; }
     html { color-scheme: dark; }
     body { margin:0; background: radial-gradient(1200px 600px at 20% -10%, #111828 0%, var(--bg) 50%) fixed; color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
     a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
-    header { position: sticky; top: 0; backdrop-filter: blur(6px); background: rgba(11,13,17,0.9); border-bottom:1px solid var(--border); z-index:10; }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 1rem; display:flex; align-items:center; justify-content:space-between; }
-    nav a { margin-left:1rem; color:var(--muted); } nav a:hover { color: var(--accent-2); }
-    main { max-width: var(--maxw); margin: 2rem auto; padding: 0 1rem 4rem; }
-    .hero { background: linear-gradient(180deg, #141922, var(--card)); border:1px solid var(--border); border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.35); padding: 2rem; }
+
+    /* Header */
+    header.site-nav { position: sticky; top: 0; backdrop-filter: blur(6px); background: rgba(11,13,17,0.9); border-bottom:1px solid var(--border); z-index:10; }
+    .site-nav-inner { max-width: var(--maxw); margin: 0 auto; padding: 1rem; display:flex; align-items:center; justify-content:space-between; }
+    .brand { display:flex; align-items:center; gap:.75rem; text-decoration:none; }
+    .brand .title { color: var(--text); font-weight:700; font-size:1.05rem; }
+    .brand img.logo-img { height:40px; width:auto; border-radius:8px; display:block; }
+
+    nav a { margin-left:1rem; color:var(accent-3); } nav a:hover { color: var(accent-4); }
+
+    /* Main container */
+    main { max-width: var(--maxw); margin: 1.75rem auto 3rem; padding: 0 1rem; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(180deg, #141922, var(--card));
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+      padding: 2rem;
+    }
     .hero h1 { margin:0 0 .5rem 0; font-size: clamp(1.6rem, 2.4vw + 1rem, 2.2rem); }
     .hero p { color: var(--muted); margin: 0; }
+
+    /* Card grid */
     .grid { display:grid; gap:1.25rem; grid-template-columns: 1fr; margin-top:1.25rem; }
     @media (min-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } }
-    .card { background: linear-gradient(180deg, #141922 0%, var(--card) 100%); border:1px solid var(--border); border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.35); padding:1.25rem; display:flex; flex-direction:column; justify-content:space-between; }
+
+    /* Card */
+    .card {
+      background: linear-gradient(180deg, #141922 0%, var(--card) 100%);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+      padding:1.25rem;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
     .card h2 { margin:.25rem 0 .25rem; font-size:1.2rem; }
     .card p { color: var(--muted); margin:0 0 1rem 0; }
-    .btn { display:inline-block; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:#0b0d11; font-weight:700; padding:.7rem 1rem; border-radius: 12px; text-align:center; }
+
+    /* Button */
+    .btn {
+      display:inline-block;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#0b0d11;
+      font-weight:700;
+      padding:.7rem 1rem;
+      border-radius: 12px;
+      text-align:center;
+      text-decoration:none;
+    }
     .btn:hover { opacity:.9; text-decoration:none; }
+
+    /* Footer */
     footer { margin-top:2rem; border-top:1px solid var(--border); }
     .foot { display:flex; flex-wrap:wrap; gap:.75rem 1.25rem; align-items:center; justify-content:space-between; padding:1.25rem; color:var(--muted); }
     .foot nav a { margin-left:1rem; color:var(--accent); }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <div style="display:flex;align-items:center;gap:.75rem;">
-        <a href="index.html" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;">
-          <img src="images/logo.png" alt="Mc Handyman LLC logo" style="height:40px;width:auto;border-radius:8px;" />
-          <h1 style="margin:0;font-size:1.1rem;color:#e7ecf3;">Mc Handyman LLC</h1>
-        </a>
-      </div>
-      <nav>
+  <header class="site-nav" role="banner">
+    <div class="site-nav-inner">
+      <!-- Single anchor: image logo + title (no nested <a>) -->
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Mc Handyman LLC logo" class="logo-img" />
+        <span class="title">Mc Handyman LLC</span>
+      </a>
+      <nav aria-label="Primary">
         <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
         <a href="contact.html">Contact</a>
